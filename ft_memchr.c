@@ -6,7 +6,7 @@
 /*   By: kpaux <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 03:09:50 by kpaux             #+#    #+#             */
-/*   Updated: 2022/04/22 08:43:30 by kpaux            ###   ########.fr       */
+/*   Updated: 2022/05/06 16:52:37 by kpaux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	if (!s || c == (int) n)
 		return (NULL);
-	while (n )
+	while (n)
 	{
 		if (*(unsigned char *) s == (unsigned char) c)
 			return ((unsigned char *) s);

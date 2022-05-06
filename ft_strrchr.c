@@ -6,7 +6,7 @@
 /*   By: kpaux <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 03:11:54 by kpaux             #+#    #+#             */
-/*   Updated: 2022/04/22 02:03:33 by kpaux            ###   ########.fr       */
+/*   Updated: 2022/05/06 16:44:54 by kpaux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	len_s;
-	
+	size_t	len_s;	
 
 	len_s = ft_strlen(s);
 	if (!s)

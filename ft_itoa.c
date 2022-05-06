@@ -6,7 +6,7 @@
 /*   By: kpaux <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 08:23:19 by kpaux             #+#    #+#             */
-/*   Updated: 2022/05/02 20:41:14 by kpaux            ###   ########.fr       */
+/*   Updated: 2022/05/06 17:21:53 by kpaux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int	ft_len(long nb)
 
 	len = 0;
 	if (nb == 0)
-	 	len = 1;
+		len = 1;
 	if (nb < 0)
 	{
 		nb = nb * -1;
@@ -37,12 +37,12 @@ char	*ft_itoa(int n)
 	char	*str;
 	long	nb;
 	int		i;
-	int 	j;
+	int		j;
 
-	j = 0;
+	j = -1;
 	nb = n;
 	i = ft_len(nb);
-	str = (char*) malloc (sizeof(char) * (i + 1));
+	str = (char *) malloc (sizeof (char) * (i + 1));
 	if (!str)
 		return (NULL);
 	str[i--] = '\0';
@@ -53,9 +53,8 @@ char	*ft_itoa(int n)
 	}
 	if (nb < 0)
 	{
-		str[j] = '-';
+		str[j++] = '-';
 		nb = nb * -1;
-		j++;
 	}
 	while (nb > 0)
 	{
