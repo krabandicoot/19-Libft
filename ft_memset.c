@@ -19,8 +19,6 @@ void	*ft_memset(void *b, int c, size_t len)
 
 	i = 0;
 	n = b;
-	if (!b || !n)
-		return (NULL);
 	while (i < len)
 	{
 		n[i] = c;
