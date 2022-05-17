@@ -48,7 +48,7 @@ static char	*ft_make_word(char *src, char c)
 
 static char	**ft_remove(char **arr, size_t j)
 {
-	while (j)
+	while (j) //remove everything before freeing the program 
 	{
 		j--;
 		free(arr[j]);
@@ -63,11 +63,13 @@ char	**ft_split(char const *s, char c)
 	size_t	j;
 	size_t	wc;
 
+	if(!s)
+		return(NULL);
 	j = 0;
 	wc = ft_word_count(s, c);
 	arr = malloc((wc + 1) * sizeof(char *));
 	if (!arr)
-		return (0);
+		return (NULL);
 	while (*s != '\0' && j < wc)
 	{
 		while (*s == c)

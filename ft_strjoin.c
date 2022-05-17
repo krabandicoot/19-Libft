@@ -15,14 +15,14 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
-	int		length;
 	int		j;
 	int		i;
 
 	i = 0;
 	j = 0;
-	length = ft_strlen(s1) + ft_strlen(s2);
-	str = malloc(sizeof(char) * length + 1);
+	if (!s1 || !s2)
+		return (NULL);
+	str = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2)) + 1);
 	if (!str)
 		return (NULL);
 	while (s1[i] != '\0')
