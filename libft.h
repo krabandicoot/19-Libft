@@ -16,6 +16,7 @@
 # include <ctype.h>
 # include <stdlib.h>
 # include <stddef.h>
+# include <limits.h>
 # include <string.h>
 # include <unistd.h>
 

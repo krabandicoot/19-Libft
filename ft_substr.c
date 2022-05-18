@@ -21,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
  	str = malloc(sizeof(char) * len + 1);
  	if (!str)
  		return (NULL);
- 	if (ft_strlen(s) < start)
+ 	if (ft_strlen(s) < start && len > 0)
  	{
  		str[0] = '\0';
  		return (str);
@@ -29,3 +29,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
  	ft_strlcpy(str, &s[start], len + 1);
  		return (str);
  }
+/*
+#include <stdio.h>
+#include <unistd.h>
+ int main()
+ {
+	 printf("%s", ft_substr("lorem ipsum dolor sit amet", 7, 10));
+ }*/
