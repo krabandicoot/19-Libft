@@ -12,54 +12,54 @@
 
 #include "libft.h"
 
-static int	ft_len(long nb)
+static unsigned int	count_digits(int n)
 {
-	int		len;
+	unsigned int	digits;
 
-	len = 0;
-	if (nb == 0)
-		len = 1;
-	if (nb < 0)
+	digits = 0;
+	if (n < 0)
 	{
-		nb = nb * -1;
-		len++;
+		n *= -1;
+		digits++;
 	}
-	while (nb > 0)
+	while (n > 0)
 	{
-		nb = nb / 10;
-		len++;
+		n = n / 10;
+		digits++;
 	}
-	return (len);
+	return (digits);
+}
+
+static void	put_nums_into_string(int n, unsigned int digits, char *num_string)
+{
+	if (n < 0)
+	{
+		num_string[0] = '-';
+		n *= -1;
+	}
+	num_string[digits] = '\0';
+	digits--;
+	while (n > 0)
+	{
+		num_string[digits] = (n % 10) + '0';
+		n = n / 10;
+		digits--;
+	}
 }
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	long	nb;
-	int		i;
-	int		j;
+	unsigned int	digits;
+	char			*num_string;
 
-	j = -1;
-	nb = n;
-	i = ft_len(nb);
-	str = (char *) malloc (sizeof (char) * (i + 1));
-	if (!str)
+	if (n == 0)
+		return (ft_strdup("0"));
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	digits = count_digits(n);
+	num_string = malloc((digits + 1) * sizeof(char));
+	if (num_string == NULL)
 		return (NULL);
-	str[i--] = '\0';
-	if (nb == 0)
-	{
-		str[0] = 48;
-		return (str);
-	}
-	if (nb < 0)
-	{
-		str[j++] = '-';
-		nb = nb * -1;
-	}
-	while (nb > 0)
-	{
-		str[i--] = 48 + (nb % 10);
-		nb = nb / 10;
-	}
-	return (str);
+	put_nums_into_string(n, digits, num_string);
+	return (num_string);
 }
