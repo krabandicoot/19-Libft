@@ -18,6 +18,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
  	if (!s)
  		return (NULL);
+	if(len > ft_strlen(s))
+		len = ft_strlen(s);
+
  	str = malloc(sizeof(char) * len + 1);
  	if (!str)
  		return (NULL);
@@ -29,10 +32,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
  	ft_strlcpy(str, &s[start], len + 1);
  		return (str);
  }
-/*
-#include <stdio.h>
-#include <unistd.h>
- int main()
- {
-	 printf("%s", ft_substr("lorem ipsum dolor sit amet", 7, 10));
- }*/
+
+// #include <stdio.h>
+// #include <unistd.h>
+//  int main()
+//  {
+// 	 printf("%s", ft_substr("lorem ipsum dolor sit amet", 7, 10));
+//  }

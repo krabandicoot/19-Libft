@@ -48,10 +48,10 @@ int	ft_atoi(const char *str)
 	return(ft_check_max(result,sign));
 }
 
-/*#include <stdio.h>
+#include <stdio.h>
 
 int main()
 {
-	printf("%d", ft_atoi("9223372036854775807"));
+	printf("%d", ft_atoi("25"));
 
-}*/
+}
