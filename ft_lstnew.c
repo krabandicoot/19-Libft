@@ -1,12 +1,16 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kpaux <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/19 22:28:40 by kpaux             #+#    #+#             */
+/*   Updated: 2022/05/19 22:28:41 by kpaux            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-/*
-Alloue (avec malloc(3)) et renvoie un nouvel
-élément. La variable membre ’content’ est
-initialisée à l’aide de la valeur du paramètre
-’content’. La variable ’next’ est initialisée à
-NULL
-*/
+#include "libft.h"
 
 t_list	*ft_lstnew(void *content)
 {

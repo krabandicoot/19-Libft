@@ -6,13 +6,13 @@
 /*   By: kpaux <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 03:07:26 by kpaux             #+#    #+#             */
-/*   Updated: 2022/05/06 16:46:31 by kpaux            ###   ########.fr       */
+/*   Updated: 2022/05/19 22:38:27 by kpaux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int ft_check_max(unsigned long long result, int sign)
+static int	ft_check_max(unsigned long long result, int sign)
 {
 	if (result > LLONG_MAX && sign == 1)
 		return (-1);
@@ -23,8 +23,8 @@ static int ft_check_max(unsigned long long result, int sign)
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	sign;
+	int					i;
+	int					sign;
 	unsigned long long	result;
 
 	i = 0;
@@ -45,13 +45,5 @@ int	ft_atoi(const char *str)
 		result = (result * 10) + (str[i] - 48);
 		i++;
 	}
-	return(ft_check_max(result,sign));
-}
-
-#include <stdio.h>
-
-int main()
-{
-	printf("%d", ft_atoi("25"));
-
+	return (ft_check_max(result, sign));
 }

@@ -1,10 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kpaux <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/19 22:32:47 by kpaux             #+#    #+#             */
+/*   Updated: 2022/05/19 22:32:51 by kpaux            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-// Libère la mémoire de l’élément passé en argument en
-// utilisant la fonction ’del’ puis avec free(3). La
-// mémoire de ’next’ ne doit pas être free.
-
-void ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
 	(*del)(lst->content);
 	free(lst);

@@ -6,7 +6,7 @@
 /*   By: kpaux <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 02:07:26 by kpaux             #+#    #+#             */
-/*   Updated: 2022/05/06 16:57:44 by kpaux            ###   ########.fr       */
+/*   Updated: 2022/05/19 22:26:25 by kpaux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static char	*ft_make_word(char *src, char c)
 
 static char	**ft_remove(char **arr, size_t j)
 {
-	while (j) //remove everything before freeing the program 
+	while (j)
 	{
 		j--;
 		free(arr[j]);
@@ -63,8 +63,8 @@ char	**ft_split(char const *s, char c)
 	size_t	j;
 	size_t	wc;
 
-	if(!s)
-		return(NULL);
+	if (!s)
+		return (NULL);
 	j = 0;
 	wc = ft_word_count(s, c);
 	arr = malloc((wc + 1) * sizeof(char *));
