@@ -82,5 +82,5 @@ char	**ft_split(char const *s, char c)
 			s++;
 	}
 	str[j] = 0;
-	return (arr);
+	return (str);
 }

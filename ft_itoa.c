@@ -57,7 +57,7 @@ char	*ft_itoa(int n)
 	if (n == INT_MIN)
 		return (ft_strdup("-2147483648"));
 	digits = count_digits(n);
-	num_string = malloc sizeof(char)) * ((digits + 1);
+	num_string = malloc((digits + 1) * sizeof(char));
 	if (num_string == NULL)
 		return (NULL);
 	ft_numsstring(n, digits, num_string);
