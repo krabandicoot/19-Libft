@@ -39,27 +39,27 @@ static char	*ft_make_word(char *src, char c)
 	i = 0;
 	while (src[i] != c && src[i] != '\0')
 		i++;
-	dst = ft_calloc((i + 1), sizeof(char));
+	dst = ft_calloc((i + 1), sizeof(char)); //initialize the memory block with zero 
 	if (!dst)
 		return (0);
 	ft_memcpy(dst, src, i);
 	return (dst);
 }
 
-static char	**ft_remove(char **arr, size_t j)
+static char	**ft_free(char **str, size_t j)
 {
 	while (j)
 	{
 		j--;
-		free(arr[j]);
+		free(str[j]);
 	}
-	free(arr);
+	free(str);
 	return (0);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**arr;
+	char	**str;
 	size_t	j;
 	size_t	wc;
 
@@ -67,27 +67,20 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	j = 0;
 	wc = ft_word_count(s, c);
-	arr = malloc((wc + 1) * sizeof(char *));
-	if (!arr)
+	str = malloc((wc + 1) * sizeof(char *));
+	if (!str)
 		return (NULL);
 	while (*s != '\0' && j < wc)
 	{
 		while (*s == c)
 			s++;
-		arr[j] = ft_make_word(((char *)&*s), c);
-		if (!arr[j])
-			return (ft_remove(arr, j));
+		str[j] = ft_make_word(((char *)&*s), c);
+		if (!str[j])
+			return (ft_free(str, j));
 		j++;
 		while (*s != c && *s != '\0')
 			s++;
 	}
-	arr[j] = 0;
+	str[j] = 0;
 	return (arr);
-}
-
-#include <stdio.h>
-
-int main()
-{
-  printf("%s", ft_split("jambon fromage qui roule", ' '));
 }
