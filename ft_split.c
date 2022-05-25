@@ -84,3 +84,10 @@ char	**ft_split(char const *s, char c)
 	arr[j] = 0;
 	return (arr);
 }
+
+#include <stdio.h>
+
+int main()
+{
+  printf("%s", ft_split("jambon fromage qui roule", ' '));
+}

@@ -30,7 +30,7 @@ static unsigned int	count_digits(int n)
 	return (digits);
 }
 
-static void	put_nums_into_string(int n, unsigned int digits, char *num_string)
+static void	ft_numsstring(int n, unsigned int digits, char *num_string) //print the number in the string
 {
 	if (n < 0)
 	{
@@ -57,9 +57,9 @@ char	*ft_itoa(int n)
 	if (n == INT_MIN)
 		return (ft_strdup("-2147483648"));
 	digits = count_digits(n);
-	num_string = malloc((digits + 1) * sizeof(char));
+	num_string = malloc sizeof(char)) * ((digits + 1);
 	if (num_string == NULL)
 		return (NULL);
-	put_nums_into_string(n, digits, num_string);
+	ft_numsstring(n, digits, num_string);
 	return (num_string);
 }
