@@ -27,3 +27,21 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		}
 	}
 }
+
+// #include <stdio.h>
+// void ft_test(unsigned int i, char *str)
+// {
+// 	if ((i & 1) == 0)
+// 	{
+// 		if (*str >= 'a' && *str <= 'z')
+// 				*str = *str - 'a' + 'A';
+// 	}
+// }
+
+// int main()
+// {
+// 	char str[] = "I don't fuck with nobody like mean girls in high school";
+// 	ft_striteri(str, &ft_test);
+// 	printf("%s", str);
+// 	return 0;
+// }

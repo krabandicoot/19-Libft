@@ -1,10 +1,12 @@
 # -*- Makefile -*- #
 
+#ar			
 #ar -rcs == c create the archive if doesn't exist 
 #			r replace, if the library exists, replace the old files in the library with new files
 #			s sort create a sort of index to access the functions in the library faster
-# $@ 		The file name of the archive file
-# $<		 
+# $@ 		file name of the rules's target
+# $<		file name of the first prerequisite
+# $^		list of all the prerequisites 
 
 SRCS		=	ft_isprint.c ft_isdigit.c ft_isascii.c ft_isalpha.c ft_isalnum.c\
 				ft_strlen.c ft_strncmp.c ft_strlcpy.c ft_strlcat.c ft_strchr.c \

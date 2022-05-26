@@ -84,3 +84,16 @@ char	**ft_split(char const *s, char c)
 	str[j] = 0;
 	return (str);
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	char str[] = "I said do you like the feeling";
+// 	char **goodluck = ft_split(str, ' ');
+// 	printf(" %s\n", goodluck[0]);
+// 	printf(" %s\n", goodluck[1]);
+// 	printf(" %s\n", goodluck[2]);
+// 	printf(" %s\n", goodluck[3]);
+// 	printf(" %s\n", goodluck[4]);
+// 	return 0;
+// }

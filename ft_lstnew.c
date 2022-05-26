@@ -23,3 +23,14 @@ t_list	*ft_lstnew(void *content)
 	lst->next = 0;
 	return (lst);
 }
+
+// #include <stdio.h>
+// int		main(void)
+// {
+// 	char	str[] = "My twins big like Tia Tamera";
+
+// 	t_list	*my_content;
+
+// 	my_content = ft_lstnew((void *)str);
+// 	printf("%s\n", my_content->content);
+// }
