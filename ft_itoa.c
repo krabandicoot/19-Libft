@@ -30,7 +30,7 @@ static unsigned int	count_digits(int n)
 	return (digits);
 }
 
-static void	ft_numsstring(int n, unsigned int digits, char *num_string) //print the number in the string
+static void	ft_numsstring(int n, unsigned int digits, char *num_string)
 {
 	if (n < 0)
 	{
